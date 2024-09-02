@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 21</title>
+    <link rel="stylesheet" href="request.css">
+</head>
+<body>
+    <header>
+        <h1>Buscador de endereço</h1>
+        <p>Busque seu endereço através do seu CEP</p>
+    </header>
+    <div class="cep">
+        <!-- <form>
+            <label for="cepNumber">CEP:</label>
+            <input id="cepNumber" type="number" placeholder="Digite seu CEP" value="result" >
+            <input type="submit" name="Enviar" id="botao" onclick="buscarEndereco()">
+        </form> -->
+
+        <form method="get" action=".">
+            <label>Cep:
+            <input name="cep" type="text" id="cep" value=""
+                   onblur="pesquisacep(this.value);"/>
+            </label>
+            <br/>
+            <label>Rua:
+            <input name="rua" type="text" id="rua"/>
+            </label>
+            <br/>
+            <label>Bairro:
+            <input name="bairro" type="text" id="bairro"/>
+            </label>
+            <br/>
+            <label>Cidade:
+            <input name="cidade" type="text" id="cidade"/>
+            </label>
+            <br/>
+            <label>Estado:
+            <input name="uf" type="text" id="uf"/>
+            </label>
+            <br/>
+            <label>IBGE:
+            <input name="ibge" type="text" id="ibge"/>
+            </label>
+            <br/>
+            <input type="submit" name="enviar" id="botao" onclick="buscarEndereco">
+          </form>
+    </div>
+    
+    <script src="request.js"></script>
+</body>
+</html>
